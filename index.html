@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AloeVeraVitaPlus-PH | Pure Organic Wellness</title>
+    
+    <!-- ADDED: Your Actual Favicon Link -->
+   <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Root Variables --- */
+        :root {
+            --primary-green: #2d5a27;
+            --accent-green: #4caf50;
+            --soft-green: #f0f7f0;
+            --dark-slate: #2c3e50;
+            --text-gray: #546e7a;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --border-color: #e0e0e0;
+            --transition: all 0.3s ease;
+        }
+
+        /* --- Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-slate);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 90, 39, 0.2);
+        }
+
+        /* --- Header/Nav --- */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        /* --- Placeholder Styling --- */
+        .placeholder {
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            color: #888;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 12px;
+            margin: 0 auto;
+        }
+
+        /* --- Section 1: Hero Section --- */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--white) 0%, var(--soft-green) 100%);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-image-box {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            margin-top: 40px;
+            display: block;
+        }
+/* --- Natural Wellness Guide Callout Banner --- */
+        .wellness-guide-section {
+            padding: 40px 0;
+        }
+
+        .wellness-guide-card {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border: 1px solid #a5d6a7;
+            border-left: 6px solid var(--primary-green);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .wellness-guide-card .guide-badge {
+            display: inline-block;
+            background-color: var(--primary-green);
+            color: var(--white);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .wellness-guide-card h2 {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 12px;
+        }
+
+        .wellness-guide-card p {
+            font-size: 1.05rem;
+            color: var(--dark-slate);
+            max-width: 700px;
+            margin: 0 auto 24px auto;
+            line-height: 1.6;
+        }
+
+        .btn-wellness-guide {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 14px 28px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(45, 90, 39, 0.25);
+        }
+
+        .btn-wellness-guide:hover {
+            background-color: var(--accent-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(45, 90, 39, 0.35);
+        }
+        /* --- Section 2: Product Grid --- */
+       /* --- Natural Wellness Guide Callout Banner --- */
+        .wellness-guide-section {
+            padding: 40px 0;
+        }
+
+        .wellness-guide-card {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border: 1px solid #a5d6a7;
+            border-left: 6px solid var(--primary-green);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .wellness-guide-card .guide-badge {
+            display: inline-block;
+            background-color: var(--primary-green);
+            color: var(--white);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .wellness-guide-card h2 {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 12px;
+        }
+
+        .wellness-guide-card p {
+            font-size: 1.05rem;
+            color: var(--dark-slate);
+            max-width: 700px;
+            margin: 0 auto 24px auto;
+            line-height: 1.6;
+        }
+
+        .btn-wellness-guide {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 14px 28px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(45, 90, 39, 0.25);
+        }
+
+        .btn-wellness-guide:hover {
+            background-color: var(--accent-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(45, 90, 39, 0.35);
+        }
+
+        /* --- Section 2: Product Grid --- */
+        .products-section {
+            padding: 100px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+
+        .product-image-box {
+            width: 100%;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--dark-slate);
+        }
+
+        .product-card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .product-card .btn {
+            width: 100%;
+        }
+/* --- Preferred Customer CTA Section (Font-Optimized) --- */
+        .preferred-customer-section {
+            padding: 40px 0 !important;
+            background-color: var(--soft-green) !important; 
+        }
+
+        .cta-card {
+            background: var(--white) !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 16px !important;
+            display: flex !important;
+            align-items: center !important;
+            overflow: hidden !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+            max-width: 900px !important; 
+            margin: 0 auto !important;  
+        }
+
+        .cta-image-box {
+            flex: 1 !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            padding: 20px !important; 
+            background-color: var(--white) !important;
+        }
+
+        .cta-image-box img {
+            width: 100% !important;
+            max-width: 280px !important; 
+            height: auto !important;
+            object-fit: contain !important; 
+            border-radius: 8px !important;
+            display: block !important;
+        }
+
+        .cta-content {
+            flex: 1.2 !important;
+            padding: 30px !important;
+            text-align: left !important;
+        }
+
+        .cta-content h2, 
+        .cta-card h2,
+        .preferred-customer-section h2 {
+            font-size: 1.8rem !important;
+            color: var(--primary-green) !important;
+            margin-top: 0px !important;
+            margin-bottom: 12px !important;
+            line-height: 1.3 !important;
+        }
+
+        .cta-content p, 
+        .cta-card p,
+        .preferred-customer-section p {
+            font-size: 0.95rem !important;
+            color: var(--text-gray) !important;
+            margin-bottom: 20px !important;
+            line-height: 1.5 !important;
+        }
+
+        .cta-content h2 {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            margin-bottom: 12px;
+        }
+
+        .cta-content p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        /* --- Footer --- */
+        footer {
+            background-color: var(--dark-slate);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* --- Responsiveness --- */
+        @media (max-width: 992px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+      @media (max-width: 768px) {
+            html, body {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow-x: hidden !important;
+            }
+
+            header, main, .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+            } /* <-- Fixed! Added this missing bracket to prevent layout break */
+
+            .hero-content {
+                display: block !important; /* Brings the text back on mobile */
+                padding: 0 10px !important;
+                margin-bottom: 20px !important;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem !important; /* Perfectly resizes your new title for phone screens */
+                line-height: 1.2 !important;
+                margin-bottom: 15px !important;
+            }
+
+            .hero p {
+                font-size: 1rem !important; /* Scales down the description text slightly */
+                margin-bottom: 20px !important;
+            }
+
+            .hero {
+                width: 100% !important;
+                padding-top: 20px !important; 
+                padding-bottom: 0px !important;
+                margin-bottom: 0px !important;
+                display: flex !important;
+                flex-direction: column !important; /* Stack text above image on mobile layout */
+                justify-content: center !important;
+                align-items: center !important;
+                box-sizing: border-box !important;
+            }
+
+            .hero-image-box, .hero img {
+                display: block !important;
+                width: 100% !important;
+                max-width: 340px !important;
+                height: auto !important;
+                min-height: 180px !important;
+                margin: 0 auto !important;
+                object-fit: contain !important;
+            }
+
+            main section, .products-section {
+                padding-top: 10px !important;
+                margin-top: 0px !important;
+            }
+
+            main h1, main h2, .section-title, h1, h2 {
+                margin-top: 5px !important;
+                padding-top: 0px !important;
+                margin-bottom: 20px !important;
+            }
+
+            nav {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 10px 15px !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+           nav {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 10px 15px !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            /* --- PASTE THE MOBILE CTA SNIPPET HERE --- */
+            .cta-card {
+                flex-direction: column !important; 
+                padding: 15px !important;
+            }
+
+            .cta-image-box {
+                width: 100% !important;
+                min-height: auto !important;
+                height: auto !important;
+                padding: 10px !important;
+            }
+
+            .cta-image-box img {
+                width: 100% !important;
+                max-width: 200px !important; 
+                height: auto !important;
+                min-height: auto !important;
+                margin: 0 auto !important;
+            }
+
+            .cta-content {
+                padding: 15px 10px 10px 10px !important;
+                text-align: center !important; 
+            }
+
+            .cta-content h2, 
+            .cta-card h2,
+            .preferred-customer-section h2 {
+                font-size: 1.4rem !important;
+                margin-top: 10px !important;
+                margin-bottom: 10px !important;
+                text-align: center !important;
+            }
+
+            .cta-content p, 
+            .cta-card p,
+            .preferred-customer-section p {
+                font-size: 0.9rem !important;
+                line-height: 1.4 !important;
+                text-align: center !important;
+                margin-bottom: 15px !important;
+            } 
+
+            .logo {
+                font-size: 1.3rem !important;
+                white-space: nowrap !important;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+            }
+
+            .product-card, .product-grid > div {
+                width: 100% !important;
+                box-sizing: border-box !important;
+                background: transparent !important;
+                padding: 10px 0 !important;
+            }
+
+            .product-card img, 
+            .product-grid img {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+                max-height: 250px !important;
+                object-fit: contain !important;
+                border-radius: 8px !important;
+                margin: 0 auto !important;
+                display: block !important;
+            }
+        }
+main section, .products-section {
+                padding-top: 10px !important;
+                margin-top: 0px !important;
+            }
+
+            main h1, main h2, .section-title, h1, h2 {
+                margin-top: 5px !important;
+                padding-top: 0px !important;
+                margin-bottom: 20px !important;
+            }
+
+            nav {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 10px 15px !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            .logo {
+                font-size: 1.3rem !important;
+                white-space: nowrap !important;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+            }
+
+            .product-card, .product-grid > div {
+                width: 100% !important;
+                box-sizing: border-box !important;
+                background: transparent !important;
+                padding: 10px 0 !important;
+ .product-card img, 
+            .product-grid img {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+                max-height: 250px !important;
+                object-fit: contain !important;
+                border-radius: 8px !important;
+                margin: 0 auto !important;
+                display: block !important;
+            }
+        } /* This closes the mobile media query cleanly */
+
+        /* --- Clean Product Image Boxes (Removes dotted placeholders) --- */
+        .product-image-box {
+            background: transparent !important;
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .product-image-box.placeholder {
+            border: none !important;
+            background: transparent !important;
+            background-color: transparent !important;
+        }
+
+        .product-card {
+            background: #ffffff !important;
+            border: 1px solid var(--border-color) !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header style="padding: 15px 0; border-bottom: 1px solid #eaeaea;">
+        <div class="container">
+            <nav style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box;">
+                
+<!-- Left Side: Brand Grouping stacked vertically -->
+                <div style="display: flex; flex-direction: column; gap: 4px; align-items: flex-start;">
+                    <!-- Original PH Brand Link -->
+                    <a href="index.html" style="text-decoration: none; font-size: 1.5rem; font-weight: 700; color: #2E5A36; white-space: nowrap;">
+                        AloeVeraVitaPlus-PH
+                    </a>
+                    
+                    <!-- NEW: USA Flag Icon Link (Both the flag image and "USA" text are clickable!) -->
+                    <a href="https://thealoeveraco.shop/zJPAoKAL" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 8px; text-decoration: none; font-size: 1.3rem; font-weight: 700;" title="Open USA Retail Store">
+                        <img src="images/usa-only.jpg" alt="USA Flag" style="height: 20px; width: auto; vertical-align: middle;">
+                        <span style="color: #002868;">USA</span>
+                    </a>
+                </div>
+
+                <!-- Right Side: Shop Catalog (Opens in a New Tab) -->
+                <a href="https://thealoeveraco.shop/lLLgTAWS" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 110px; height: 60px; padding: 0; font-weight: 600; font-size: 1.05rem; line-height: 1.2; border-radius: 12px; text-decoration: none; text-align: center;">
+                    <span>Shop</span>
+                    <span>Catalog</span>
+                </a>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+      <!-- Section 1: Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Aloe Vera Vitamins Supplements Plus More</h1>
+            <p>Experience the highest quality organic Aloe Vera products designed to nourish your body and revitalize your skin from within.</p>
+            <a href="https://thealoeveraco.shop/yQSrpHw1" target="_blank"  class="btn btn-primary">Shop Phil. FBO Store</a>
+        </div>
+        <div class="hero-image-box">
+            <img src="images/hero.jpeg" alt="Pure Wellness Aloe Vera Products" width="1200" height="600">
+        </div>
+    </div>
+</section>
+
+        <!-- Section 2: Featured Aloe Products -->
+        <section class="products-section" id="featured-products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Signature Essentials</h2>
+                    <p>Hand-picked solutions for your health and beauty routine.</p>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product Card 1 -->
+                    <article class="product-card">
+                        <div class="images"><img src="images/drink.png" alt="Pure Wellness Aloe Vera Drink" width="300" height="300"></div>
+                        <h3>Drinks</h3>
+                        <p>Drink in the benefits of Forever’s aloe vera gel in our powerful line of drinks. Why drink aloe? Aloe vera supports your digestive system, promotes a healthy immune system and helps you maintain natural energy levels. Try our selection of gel flavors with a high concentration of inner-leaf aloe vera gel and other delicious drinks made with our aloe.</p>
+                        <a href="https://thealoeveraco.shop/yQSrpHw1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Shop Now</a>
+                    </article>
+
+                    <!-- Product Card 2 -->
+                    <article class="product-card">
+                        <div class="placeholder product-image-box"><img src="images/our-products.png" alt="Pure Wellness Aloe Vera Drink" width="300" height="300"></div>
+                        <h3>Our Products</h3>
+                        <p>Our products are loved by people in more than 140 countries around the world. Discover the most popular products to help you look better and feel better..</p>
+                        <a href="https://thealoeveraco.shop/lLLgTAWS" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Shop Now</a>
+                    </article>
+
+                    <!-- Product Card 3 -->
+                    <article class="product-card">
+                        <div class="placeholder product-image-box"><img src="images/nutritionals.jpeg" alt="Pure Wellness Aloe Vera Drink" width="300" height="300"></div>
+                        <h3>Nutritionals</h3>
+                        <p>Proper nutrition is the fuel that keeps your mind sharp and body strong. Even a well-balanced diet can leave you with nutritional gaps to fill. That’s what makes Forever's nutritional supplements a great addition to your routine. From complex daily vitamins to natural energy boosters and digestive aides, our complete lineup of nutritional products has something for everyone.</p>
+                        <a href="https://thealoeveraco.shop/XSv3YAC5" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Shop Now</a>
+              </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION: Natural Wellness Guide Banner -->
+        <section class="wellness-guide-section">
+            <div class="container">
+                <div class="wellness-guide-card">
+                    <span class="guide-badge">Free Resource</span>
+                    <h2>Natural Wellness & Supplement Guide</h2>
+                    <p>
+                        Explore curated food-based remedies, gut health routines, joint support, and targeted supplement suggestions to support your daily health and vitality.
+                    </p>
+                   <a href="pdf-file/wellness-guide.pdf" target="_blank" rel="noopener noreferrer" class="btn-wellness-guide">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>
+    Explore the Wellness Guide
+</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Section 3: Preferred Customer Call-to-Action -->
+    <section class="preferred-customer-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-image-box">
+                    <!-- Replace "preferred-customer.jpeg" with your actual image file name if it's different! -->
+                    <img src="images/fpc.jpg" alt="Join Forever Preferred Customer">
+                </div>
+                <div class="cta-content">
+                    <h2>Be a Forever Preferred Customer</h2>
+                    <p>As a Forever Preferred Customer, you'll get 5% off on future purchases and be part of our exclusive club of insiders that will get updates on new products, promotions and news before anyone else.
+
+The more you purchase, the more you can save! After 2 Case Credits of purchases in 2 consecutive months, you'll be eligible to receive a 30% discount on future purchases. Sign up and start saving today.!</p>
+                    <a href="https://thealoeveraco.shop/GshYgrxj" class="btn btn-primary" target="_blank">Be a FPC & Save</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Section 4: Forever Business Owner Call-to-Action -->
+    <section class="fbo-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-image-box">
+                    <!-- Replace "fbo.jpg" with your actual image file name if it's different! -->
+                    <img src="images/fboinabox.png" alt="Join Forever Business Owner">
+                </div>
+                <div class="cta-content">
+                    <h2>Join Forever Business Owner</h2>
+                    <p>Ready to build your own business and earn extra income? As a Forever Business Owner, you can share these amazing, high-quality wellness products, build a team, and earn uncapped commissions, bonuses, and global travel opportunities. Start your journey toward financial freedom today!</p>
+                    <a href="https://thealoeveraco.shop/GshYgrxj" class="btn btn-primary" target="_blank">Become an FBO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <span class="footer-logo">AloeVeraVitaPlus-PH</span>
+            <p>&copy; 2023 AloeVeraVitaPlus. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #b0bec5;">Organic Solutions for a Modern Lifestyle.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
