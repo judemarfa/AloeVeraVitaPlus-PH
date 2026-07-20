@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AloeVeraVitaPlus-PH | Pure Organic Wellness</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Root Variables --- */
+        :root {
+            --primary-green: #2d5a27;
+            --accent-green: #4caf50;
+            --soft-green: #f0f7f0;
+            --dark-slate: #2c3e50;
+            --text-gray: #546e7a;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --border-color: #e0e0e0;
+            --transition: all 0.3s ease;
+        }
+
+        /* --- Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-slate);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 90, 39, 0.2);
+        }
+
+        /* --- Header/Nav --- */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        /* --- Placeholder Styling --- */
+        .placeholder {
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            color: #888;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 12px;
+            margin: 0 auto;
+        }
+
+        /* --- Section 1: Hero Section --- */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--white) 0%, var(--soft-green) 100%);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-image-box {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            margin-top: 40px;
+            display: block;
+    
+        }
+
+        /* --- Section 2: Product Grid --- */
+        .products-section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+
+        .product-image-box {
+            width: 100%;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--dark-slate);
+        }
+
+        .product-card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .product-card .btn {
+            width: 100%;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--dark-slate);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+/* --- Responsiveness --- */
+        @media (max-width: 992px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* 1. RESET STRUCTURAL BASE FOR TRUE SMARTPHONE WIDTHS */
+            html, body {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow-x: hidden !important;
+            }
+
+            header, main, .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            /* 2. HIDE HERO TEXT CONTAINER */
+            .hero-content {
+                display: none !important;
+            }
+
+            /* 3. COLLAPSE HERO BOX HEIGHT & PADDING COMPLETELY */
+            .hero {
+                width: 100% !important;
+                padding-top: 20px !important; 
+                padding-bottom: 0px !important;
+                margin-bottom: 0px !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                box-sizing: border-box !important;
+            }
+
+            .hero-image-box, .hero img {
+                display: block !important;
+                width: 100% !important;
+                max-width: 340px !important;
+                height: auto !important;
+                min-height: 180px !important;
+                margin: 0 auto !important;
+                object-fit: contain !important;
+            }
+
+            /* 4. FORCE THE NEXT SECTION AND ITS TITLE TO MOVE UP */
+            main section, .products-section {
+                padding-top: 10px !important;
+                margin-top: 0px !important;
+            }
+
+            main h1, main h2, .section-title, h1, h2 {
+                margin-top: 5px !important;
+                padding-top: 0px !important;
+                margin-bottom: 20px !important;
+            }
+
+            /* 5. FIX NAVIGATION HEADER */
+            nav {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 10px 15px !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            .logo {
+                font-size: 1.3rem !important;
+                white-space: nowrap !important;
+            }
+
+            /* 6. STACK CARDS AND MATCH IMAGE RATIOS NATURALLY */
+            .product-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+            }
+
+            /* Targets the product layout items/cards to reset background behavior */
+            .product-card, .product-grid > div {
+                width: 100% !important;
+                box-sizing: border-box !important;
+                background: transparent !important; /* Removes any rigid background placeholder colors */
+                padding: 10px 0 !important;
+            }
+
+            /* Fixes the image sizing bug across all 3 product sections */
+            .product-card img, 
+            .product-grid img {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important; /* Lets the height adjust naturally based on width */
+                max-height: 250px !important; /* Keeps them beautifully uniform */
+                object-fit: contain !important; /* Prevents chopping/cropping text or graphics */
+                border-radius: 8px !important;
+                margin: 0 auto !important;
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+
+<!-- Header Navigation -->
+    <header style="padding: 15px 0; border-bottom: 1px solid #eaeaea;">
+        <div class="container">
+            <!-- Horizontal layout: Brands on Left, Button on Right -->
+            <nav style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box;">
+                
+                <!-- Left Side: Brand Grouping stacked vertically -->
+                <div style="display: flex; flex-direction: column; gap: 4px; align-items: flex-start;">
+                    <!-- Original PH Brand Link -->
+                    <a href="index.html" style="text-decoration: none; font-size: 1.5rem; font-weight: 700; color: #2E5A36; white-space: nowrap;">
+                        AloeVeraVitaPlus-PH
+                    </a>
+                    
+                    <!-- DIRECT LINK: Pulsating US Brand Link pointing straight to your US Store -->
+                    <a href="https://thealoeveraco.shop/zJPAoKAL" target="_blank" class="us-pulsing-link" style="text-decoration: none; font-size: 1.5rem; font-weight: 700; white-space: nowrap;" title="Open USA Retail Store">
+                        AloeVeraVitaPlus-USA
+                    </a>
+                </div>
+
+                <!-- Right Side: Button with Vertically Stacked Text inside for the PH Catalog -->
+                <a href="https://thealoeveraco.shop/lLLgTAWS" class="btn btn-primary" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 110px; height: 60px; padding: 0; font-weight: 600; font-size: 1.05rem; line-height: 1.2; border-radius: 12px; text-decoration: none; text-align: center;">
+                    <span>Shop</span>
+                    <span>Catalog</span>
+                </a>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Smooth Breathing Animation for USA Link Only -->
+    <style>
+        /* USA LINK: Smooth fade from Gray (0.35 opacity) to Bright Blue (#002868) */
+        .us-pulsing-link {
+            animation: usaBreathe 3s infinite ease-in-out;
+        }
+
+        @keyframes usaBreathe {
+            0%, 100% {
+                color: #888888;
+                opacity: 0.35;
+                transform: scale(1);
+            }
+            50% {
+                color: #002868;
+                opacity: 1.0;
+                transform: scale(1.02);
+            }
+        }
+    </style>
+
+    <main>
+        <!-- Section 1: Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Pure Wellness, Powered by Nature</h1>
+                    <p>Experience the highest quality organic Aloe Vera products designed to nourish your body and revitalize your skin from within.</p>
+                    <a href="#featured-products" class="btn btn-primary">Discover the Collection</a>
+                </div>
+                <div class="hero-image-box">
+       <img src="images/hero.jpeg" alt="Pure Wellness Aloe Vera Products" width="1200" height="600">
+   </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Featured Aloe Products -->
+        <section class="products-section" id="featured-products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Signature Essentials</h2>
+                    <p>Hand-picked solutions for your health and beauty routine.</p>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product Card 1 -->
+                    <article class="product-card">
+                        <div class="images"><img src="images/drink.png" alt="Pure Wellness Aloe Vera Drink" width="300" height="300"></div>
+                        <h3>Drinks</h3>
+                        <p>Drink in the benefits of Forever’s aloe vera gel in our powerful line of drinks. Why drink aloe? Aloe vera supports your digestive system, promotes a healthy immune system and helps you maintain natural energy levels. Try our selection of gel flavors with a high concentration of inner-leaf aloe vera gel and other delicious drinks made with our aloe.</p>
+                        <a href="https://thealoeveraco.shop/lLLgTAWS" class="btn btn-primary">Shop Now</a>
+                    </article>
+
+                    <!-- Product Card 2 -->
+                    <article class="product-card">
+                        <div class="placeholder product-image-box"><img src="images/our-products.png" alt="Pure Wellness Aloe Vera Drink" width="300" height="300"></div>
+                        <h3>Our Products</h3>
+                        <p>Our products are loved by people in more than 140 countries around the world. Discover the most popular products to help you look better and feel better..</p>
+                        <a href="https://thealoeveraco.shop/lLLgTAWS" class="btn btn-primary">Shop Now</a>
+                    </article>
+
+                    <!-- Product Card 3 -->
+                    <article class="product-card">
+                        <div class="placeholder product-image-box"><img src="images/artic.jpg" alt="Pure Wellness Aloe Vera Drink" width="300" height="300"></div>
+                        <h3>Nutritionals</h3>
+                        <p>Proper nutrition is the fuel that keeps your mind sharp and body strong. Even a well-balanced diet can leave you with nutritional gaps to fill. That’s what makes Forever's nutritional supplements a great addition to your routine. From complex daily vitamins to natural energy boosters and digestive aides, our complete lineup of nutritional products has something for everyone.</p>
+                        <a href="https://thealoeveraco.shop/lLLgTAWS" class="btn btn-primary">Shop Now</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <span class="footer-logo">AloeVeraVitaPlus-PH</span>
+            <p>&copy; 2023 AloeVeraVitaPlus. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #b0bec5;">Organic Solutions for a Modern Lifestyle.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

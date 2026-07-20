@@ -1,0 +1,7 @@
+Future Updates: Whenever you make changes in VS Code going forward, all you'll need to run in your terminal is:
+
+PowerShell
+
+git add .
+git commit -m "Describe your changes here"
+git push
