@@ -24,6 +24,26 @@ Phil-FLP-***Drinks***:
 
 
 
+Phil-Retail-Store:
+
+
+
+&#x20;    https://thealoeveraco.shop/lLLgTAWS
+
+
+
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+
+
+USA-Retail\_Store:
+
+
+
+&#x20;    https://thealoeveraco.shop/WBoFgYq2
+
+
+
 
 
 Yes, we absolutely can! When you are ready to start your next work session, I will be right here to guide you through it step-by-step.
