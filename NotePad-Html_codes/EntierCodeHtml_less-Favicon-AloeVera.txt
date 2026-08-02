@@ -6,9 +6,6 @@
     <title>AloeVeraVitaPlus | Premium Aloe Vera & Natural Supplements</title>
     <meta name="description" content="Discover IASC-certified aloe vera gel and premium nutrition through AloeVeraVitaPlus, an authorized Independent Forever Business Owner portal.">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
     <!-- Open Graph for Social Sharing -->
     <meta property="og:title" content="AloeVeraVitaPlus - Pure Aloe Vera & Wellness Solutions">
     <meta property="og:description" content="Hand-filleted inner leaf aloe vera gel and science-backed nutritional supplements.">
@@ -375,6 +372,7 @@
         }
         .btn-join:hover {
             background-color: #1b5e20;
+        }
         }
     </style>
 </head>

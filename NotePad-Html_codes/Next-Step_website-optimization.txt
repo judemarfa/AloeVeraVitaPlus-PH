@@ -1,0 +1,43 @@
+====================================================================
+               WEBSITE OPTIMIZATION & DEPLOYMENT CHECKLIST
+====================================================================
+
+1. CLEAN UP & ORGANIZE PROJECT ROOT
+--------------------------------------------------------------------
+[ ] Move or delete outdated subfolders (e.g., `Gemini-code/`, `NotePad-Html_codes/`)
+    to prevent editing duplicate files by mistake.
+[ ] Ensure primary files stay at the root level:
+    - index.html
+    - wellness-guide.html
+    - images/
+    - pdf-file/
+
+2. TECHNICAL SEO ENHANCEMENTS
+--------------------------------------------------------------------
+[ ] Check <head> section of index.html for descriptive meta tags:
+    - <title>Aloe Vera Vita Plus PH | Health & Wellness Guide</title>
+    - <meta name="description" content="Discover natural wellness products, aloe vera health benefits, and supplements in the Philippines.">
+[ ] Add descriptive alt attributes to all <img> tags:
+    - Example: <img src="images/product.png" alt="Aloe Vera Vita Plus Supplement Bottle">
+[ ] Add Open Graph meta tags for social media sharing:
+    - <meta property="og:title" content="...">
+    - <meta property="og:description" content="...">
+    - <meta property="og:image" content="images/preview.png">
+
+3. AEO & GEO OPTIMIZATIONS (FOR GOOGLE AI & CHATBOTS)
+--------------------------------------------------------------------
+[ ] Add a structured FAQ section on index.html with direct Q&A formatting:
+    - "What are the health benefits of Aloe Vera Vita Plus?"
+    - "How do I order products in the Philippines?"
+[ ] Add JSON-LD Schema Markup (Structured Data) inside <head> for:
+    - Organization / Local Business info
+    - Product / Offer details
+
+4. ROUTINE GIT & VS CODE DEPLOYMENT STEPS
+--------------------------------------------------------------------
+[ ] 1. Save all files in VS Code and test local links.
+[ ] 2. Open Source Control panel (`Ctrl + Shift + G` / `Cmd + Shift + G`).
+[ ] 3. Stage changes (`+`) and type a clear commit message.
+[ ] 4. Click 'Sync Changes' (or run `git push origin main` in terminal).
+[ ] 5. Monitor the Actions tab on your repository to verify deployment.
+[ ] 6. Hard-refresh your live site (`Ctrl + F5` or `Cmd + Shift + R`).
