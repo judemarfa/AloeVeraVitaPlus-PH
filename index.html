@@ -6,42 +6,9 @@
     <title>AloeVeraVitaPlus | Premium Aloe Vera & Natural Supplements</title>
     <meta name="description" content="Discover IASC-certified aloe vera gel and premium nutrition through AloeVeraVitaPlus, an authorized Independent Forever Business Owner portal.">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 
-    <!-- Open Graph for Social Sharing -->
-    <meta property="og:title" content="AloeVeraVitaPlus - Pure Aloe Vera & Wellness Solutions">
-    <meta property="og:description" content="Hand-filleted inner leaf aloe vera gel and science-backed nutritional supplements.">
-    <meta property="og:type" content="website">
-
-    <!-- Schema.org JSON-LD for AI Search Engines (GEO/AEO) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "AloeVeraVitaPlus - Independent Forever Business Owner",
-      "url": "https://AloeVeraVitaPlus.com",
-      "description": "Discover authentic IASC-certified Aloe Vera supplements and nutrition products through Independent Forever Business Owner portal AloeVeraVitaPlus.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Forever Living Products",
-        "url": "https://foreverliving.com"
-      },
-      "areaServed": [
-        {
-          "@type": "Country",
-          "name": "Philippines"
-        },
-        {
-          "@type": "Country",
-          "name": "United States"
-        }
-      ]
-    }
-    </script>
-
     <style>
-        /* Modern Reset & Typography */
         :root {
             --primary-green: #2e7d32;
             --accent-gold: #fbc02d;
@@ -57,14 +24,15 @@
             line-height: 1.6;
             background-color: var(--light-bg);
         }
-        header {
+        
+        .main-header {
             background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
-        .nav-container {
+        .header-container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0.8rem 1.5rem;
@@ -74,16 +42,14 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-        .logo-group {
+        .nav-brand {
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-        .logo {
-            font-size: 1.4rem;
-            font-weight: bold;
+            font-size: 1.3rem;
             color: var(--primary-green);
             text-decoration: none;
+            font-weight: bold;
         }
         .tagline-badge {
             font-size: 0.75rem;
@@ -93,56 +59,35 @@
             border-radius: 4px;
             font-weight: 600;
         }
-        .store-selector {
+        .nav-links {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        .store-selector label {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--dark-text);
-        }
-        .store-btn {
+        .shop-btn {
             background-color: var(--primary-green);
             color: var(--white);
-            padding: 6px 14px;
+            padding: 8px 16px;
             text-decoration: none;
             font-size: 0.85rem;
             border-radius: 20px;
             font-weight: 600;
             transition: background-color 0.2s ease;
         }
-        .store-btn:hover {
+        .shop-btn:hover {
             background-color: #1b5e20;
         }
 
-      /* Hero Banner with Custom Background Image */
-.hero {
-    /* Keep your original hero image URL or asset inside the url() function below */
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
-                url('images/hero.jpeg') center/cover no-repeat;
-    color: var(--white);
-    text-align: center;
-    padding: 6rem 1rem;
-}
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                        url('images/hero.jpeg') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 1rem;
         }
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 750px;
-            margin: 0 auto 2rem auto;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.4);
-        }
-        .hero-cta-group {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.25rem; max-width: 750px; margin: 0 auto 2rem auto; }
+        .hero-cta-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         .cta-btn {
             background-color: var(--accent-gold);
             color: #222;
@@ -152,18 +97,12 @@
             font-size: 1rem;
             border-radius: 30px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
-        .cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
-        }
-        .features-grid {
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 1.5rem; }
+        .section-title { text-align: center; font-size: 2rem; color: var(--primary-green); margin-bottom: 1rem; }
+        
+        .features-grid, .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
@@ -176,49 +115,7 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             border-top: 4px solid var(--primary-green);
         }
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--primary-green);
-            margin-bottom: 1rem;
-        }
-        .faq-item {
-            background: var(--white);
-            margin-bottom: 1rem;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-        }
-        .faq-item h3 {
-            margin-top: 0;
-            color: var(--primary-green);
-        }
-        footer {
-            background-color: #1b2a1c;
-            color: #d1d5db;
-            padding: 3rem 1.5rem;
-            font-size: 0.9rem;
-        }
-        .disclaimer-box {
-            border-top: 1px solid #374151;
-            padding-top: 2rem;
-            margin-top: 2rem;
-        }
-        .disclaimer-box h4 {
-            color: var(--white);
-            margin-bottom: 0.5rem;
-        }
-        /* Signature Essentials & Guide Styles */
-        .signature-essentials {
-            margin-top: 3rem;
-            margin-bottom: 3rem;
-        }
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+
         .product-card {
             background: var(--white);
             border-radius: 10px;
@@ -228,42 +125,9 @@
             flex-direction: column;
             text-align: center;
         }
-        .product-image img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-        .product-content {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            justify-content: space-between;
-        }
-        .product-content h3 {
-            color: var(--primary-green);
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-        }
-        .product-content p {
-            font-size: 0.95rem;
-            color: var(--dark-text);
-            margin-bottom: 1.5rem;
-        }
-        .btn-secondary {
-            display: inline-block;
-            background-color: var(--primary-green);
-            color: var(--white);
-            padding: 8px 20px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background-color 0.2s ease;
-        }
-        .btn-secondary:hover {
-            background-color: #1b5e20;
-        }
+        .product-image img { width: 100%; height: 220px; object-fit: cover; }
+        .product-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+
         .wellness-guide-banner {
             background-color: #e8f5e9;
             border-left: 5px solid var(--primary-green);
@@ -273,27 +137,6 @@
             margin-bottom: 2rem;
             text-align: center;
         }
-        .guide-badge {
-            display: inline-block;
-            background-color: var(--primary-green);
-            color: var(--white);
-            font-weight: bold;
-            font-size: 0.75rem;
-            padding: 4px 12px;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-        .wellness-guide-banner h2 {
-            color: var(--primary-green);
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-        }
-        .wellness-guide-banner p {
-            max-width: 650px;
-            margin: 0 auto 1.5rem auto;
-            color: var(--dark-text);
-        }
         .btn-accent {
             display: inline-block;
             padding: 10px 24px;
@@ -302,274 +145,112 @@
             font-weight: bold;
             border-radius: 25px;
             text-decoration: none;
-            transition: all 0.2s ease;
         }
-        .btn-accent:hover {
-            transform: translateY(-2px);
-        }
-       /* Join & Preferred Customer Section */
-        .join-section {
-            padding: 3rem 1.5rem;
-            background-color: var(--white);
-            margin-top: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-        }
-        .join-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
-        }
-        .join-card {
-            background-color: var(--light-bg);
-            border-radius: 10px;
-            border-top: 4px solid var(--primary-green);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-       .join-card-image {
-            background-color: #ffffff; /* Adds a clean background behind the full image */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px 0;
-        }
-        .join-card-image img {
-            width: 100%;
-            height: auto;
-            max-height: 220px;
-            object-fit: contain; /* Prevents cropping so the full image shows */
-            display: block;
-        }
-        .join-card-body {
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1rem;
             padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
+            border-radius: 8px;
         }
-        .join-card h3 {
-            color: var(--primary-green);
-            margin-top: 0;
-            font-size: 1.4rem;
+
+        .main-footer {
+            background-color: #1b2a1c;
+            color: #d1d5db;
+            padding: 3rem 1.5rem;
+            font-size: 0.9rem;
         }
-        .join-card p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-        .btn-join {
-            display: inline-block;
-            background-color: var(--primary-green);
-            color: var(--white);
-            padding: 10px 22px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            text-align: center;
-            transition: background-color 0.2s ease;
-        }
-        .btn-join:hover {
-            background-color: #1b5e20;
-        }
+        .footer-container { max-width: 1000px; margin: 0 auto; }
+        .footer-divider { border: 0; border-top: 1px solid #374151; margin: 1.5rem 0; }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation with USA / PH Store Selector -->
-    <header>
-        <div class="nav-container">
-            <div class="logo-group">
-                <a href="#" class="logo">AloeVeraVitaPlus</a>
-                <span class="tagline-badge">FBO Authorized Portal</span>
-            </div>
-            
-            <!-- Country Store Links -->
-            <div class="store-selector">
-                <label>Shop Official Store:</label>
-                <!-- REPLACE THE HREF VALUES WITH YOUR ACTUAL PERSONAL REPLICATED STORE LINKS -->
-                <a href="https://thealoeveraco.shop/lLLgTAWS" class="store-btn" target="_blank">🇵🇭 Philippines Store</a>
-                <a href="https://thealoeveraco.shop/WBoFgYq2" class="store-btn" target="_blank">🇺🇸 USA Store</a>
-            </div>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="nav-brand">
+                AloeVeraVitaPlus <span class="tagline-badge">FBO Authorized Portal</span>
+            </a>
+            <nav class="nav-links">
+                <a href="https://thealoeveraco.shop/lLLgTAWS" class="shop-btn" target="_blank" rel="noopener">🇵🇭 Shop Philippines</a>
+                <a href="https://thealoeveraco.shop/WBoFgYq2" class="shop-btn" target="_blank" rel="noopener">🇺🇸 Shop USA</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Main Hero Banner -->
     <section class="hero">
         <h1>Pure Aloe Vera & Daily Vitality Solutions</h1>
         <p>Experience the natural power of hand-filleted, IASC-certified aloe vera gel and scientific nutrition formulas delivered straight to your home.</p>
         <div class="hero-cta-group">
-            <!-- REPLACE HREF WITH YOUR PHILIPPINES / US LINKS -->
             <a href="https://thealoeveraco.shop/lLLgTAWS" class="cta-btn" target="_blank">Shop Philippines Cart</a>
             <a href="https://thealoeveraco.shop/WBoFgYq2" class="cta-btn" target="_blank">Shop USA Cart</a>
         </div>
     </section>
 
-    <!-- Core Benefits Section (E-E-A-T & Authority) -->
     <main class="container">
         <h2 class="section-title">The Forever Science Difference</h2>
-        <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem auto;">
-            Connecting health-conscious individuals with world-class aloe vera products backed by international certification and strict quality standards.
-        </p>
-
         <div class="features-grid">
             <div class="feature-card">
                 <h3>Plant-to-Product Purity</h3>
-                <p>Harvested by hand and processed within hours to lock in natural bio-nutrients, ensuring you receive pure inner-leaf gel as nature intended.</p>
+                <p>Harvested by hand and processed within hours to lock in natural bio-nutrients.</p>
             </div>
             <div class="feature-card">
                 <h3>IASC Seal Certified</h3>
-                <p>Forever Living was the first to receive the International Aloe Science Council (IASC) Seal of Approval for purity and high aloe content.</p>
+                <p>Forever Living was the first to receive the International Aloe Science Council Seal of Approval.</p>
             </div>
             <div class="feature-card">
                 <h3>Official Local Fulfillment</h3>
-                <p>All orders are processed and fulfilled through official corporate centers in your region (Philippines & USA) for guaranteed freshness and money-back protection.</p>
+                <p>All orders are processed through official corporate centers in your region (Philippines & USA).</p>
             </div>
         </div>
-        <!-- OUR SIGNATURE ESSENTIALS SECTION -->
-        <section class="signature-essentials">
+
+        <section style="margin-top: 3rem;">
             <h2 class="section-title">Our Signature Essentials</h2>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto;">Hand-picked solutions for your health and beauty routine.</p>
-            
             <div class="products-grid">
-              
-              <!-- Card 1: Drinks -->
               <article class="product-card">
-                <div class="product-image">
-                  <img src="images/drink.png" alt="Pure Wellness Aloe Vera Drinks" loading="lazy">
-                </div>
+                <div class="product-image"><img src="images/drink.png" alt="Pure Wellness Aloe Vera Drinks" loading="lazy"></div>
                 <div class="product-content">
                   <h3>Drinks</h3>
-                  <p>Drink in the benefits of Forever’s aloe vera gel in our powerful line of drinks to support digestion, immunity, and natural energy levels.</p>
-                  <a href="https://thealoeveraco.shop/yQSrpHw1" class="btn-secondary" target="_blank">Shop Now</a>
+                  <p>Drink in the benefits of Forever’s aloe vera gel in our powerful line of drinks.</p>
+                  <a href="https://thealoeveraco.shop/yQSrpHw1" class="shop-btn" target="_blank">Shop Now</a>
                 </div>
               </article>
-
-              <!-- Card 2: Featured Lineup -->
               <article class="product-card">
-                <div class="product-image">
-                  <img src="images/our-products.png" alt="Popular Aloe Vera Products" loading="lazy">
-                </div>
+                <div class="product-image"><img src="images/our-products.png" alt="Popular Aloe Vera Products" loading="lazy"></div>
                 <div class="product-content">
                   <h3>Our Products</h3>
-                  <p>Loved by people in over 140 countries worldwide. Discover our most popular products to help you look and feel better every day.</p>
-                  <a href="https://thealoeveraco.shop/lLLgTAWS" class="btn-secondary" target="_blank">Shop Now</a>
+                  <p>Loved by people in over 140 countries worldwide.</p>
+                  <a href="https://thealoeveraco.shop/lLLgTAWS" class="shop-btn" target="_blank">Shop Now</a>
                 </div>
               </article>
-
-              <!-- Card 3: Nutritionals -->
               <article class="product-card">
-                <div class="product-image">
-                  <img src="images/nutritionals.jpeg" alt="Forever Nutritional Supplements" loading="lazy">
-                </div>
+                <div class="product-image"><img src="images/nutritionals.jpeg" alt="Forever Nutritional Supplements" loading="lazy"></div>
                 <div class="product-content">
                   <h3>Nutritionals</h3>
-                  <p>Fill nutritional gaps with daily complex vitamins, natural energy boosters, and targeted digestive aids for mind and body vitality.</p>
-                  <a href="https://thealoeveraco.shop/XSv3YAC5" class="btn-secondary" target="_blank">Shop Now</a>
+                  <p>Fill nutritional gaps with daily complex vitamins and targeted aids.</p>
+                  <a href="https://thealoeveraco.shop/XSv3YAC5" class="shop-btn" target="_blank">Shop Now</a>
                 </div>
               </article>
-
             </div>
         </section>
 
-        <!-- NATURAL WELLNESS & SUPPLEMENT GUIDE BANNER -->
+        <!-- BANNER THAT LINKS TO SUBPAGE -->
         <section class="wellness-guide-banner">
-            <span class="guide-badge">FREE RESOURCE</span>
             <h2>Natural Wellness & Supplement Guide</h2>
-            <p>Explore curated food-based remedies, gut health routines, joint support, and targeted supplement suggestions to support your daily health and vitality.</p>
-           <a href="wellness-guide.html" class="btn-accent" target="_blank" rel="noopener">Explore the Wellness Guide</a>
+            <p>Explore curated food-based remedies, gut health routines, joint support, and targeted supplement suggestions.</p>
+            <a href="wellness-guide.html" class="btn-accent">Explore the Wellness Guide</a>
         </section>
     </main>
-<!-- JOIN & PREFERRED CUSTOMER SECTION -->
-        <section class="join-section">
-            <h2 class="section-title">Join the Forever Family</h2>
-            <p style="text-align: center; max-width: 650px; margin: 0 auto;">Discover exclusive savings on products or unlock the opportunity to build your own business.</p>
-            
-            <div class="join-grid">
-                <!-- Card 1: Forever Preferred Customer -->
-                <div class="join-card">
-                    <div class="join-card-image">
-                        <img src="images/fpc.jpg" alt="Forever Preferred Customer Loyalty Benefits" loading="lazy">
-                    </div>
-                    <div class="join-card-body">
-                        <div>
-                            <h3>Be a Forever Preferred Customer</h3>
-                            <p>
-                                Get <strong>5% off</strong> on future purchases as an insider! Enjoy early access to new products, promotions, and health news. 
-                                <br><br>
-                                <em>Save even more:</em> Earn 2 Case Credits in 2 consecutive months to unlock a lifetime <strong>30% discount</strong> on all future orders.
-                            </p>
-                        </div>
-                        <a href="https://thealoeveraco.shop/GshYgrxj/" class="btn-join" target="_blank" rel="noopener">Be an FPC & Save</a>
-                    </div>
-                </div>
 
-                <!-- Card 2: Forever Business Owner (Business in a Box) -->
-                <div class="join-card">
-                    <div class="join-card-image">
-                        <img src="images/fboinabox.png" alt="Business in a Box - Join Forever Business Owner" loading="lazy">
-                    </div>
-                    <div class="join-card-body">
-                        <div>
-                            <h3>Join Forever Business Owner</h3>
-                            <p>
-                                Ready to build your own business and earn extra income? Share premium wellness products, mentor a team, and unlock uncapped commissions, bonuses, and global travel rewards.
-                            </p>
-                        </div>
-                        <a href="https://thealoeveraco.shop/GshYgrxj/" class="btn-join" target="_blank" rel="noopener">Become an FBO</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- Knowledge Base & AEO FAQ Section -->
-    <section style="background-color: #f0f4f1; padding: 4rem 1.5rem;">
-        <div class="container" style="padding: 0;">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-
-            <div class="faq-item">
-                <h3>Why is inner-leaf aloe vera gel preferred for nutritional drinks?</h3>
-                <p>The inner leaf gel contains naturally occurring polysaccharide chains, vitamins, and minerals without the harsh rind elements. Hand-filleting ensures maximum aloe purity for digestive support and general daily vitality.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>How do I verify the authenticity of Forever Living products?</h3>
-                <p>Authentic products carry official certifications like the IASC Seal and are fulfilled exclusively through authorized Independent Forever Business Owner portals linked directly to corporate fulfillment systems.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Can I order for delivery in both the United States and the Philippines?</h3>
-                <p>Yes! Use the store links in our navigation banner to select either the United States or Philippines store. Your order will be fulfilled directly by the respective country's official corporate logistics center.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Corporate Disclosure & Compliance Footer -->
-    <footer>
-        <div class="container" style="padding: 0;">
-            <p><strong>AloeVeraVitaPlus</strong> — Authorized Independent Forever Business Owner Portal</p>
-            
-            <div class="disclaimer-box">
-                <h4>Official Business & Marketing Disclosure</h4>
-                <p>
-                    <strong>AloeVeraVitaPlus.com</strong> is an independent digital marketing channel owned and operated by an authorized <strong>Independent Forever Business Owner (FBO)</strong> serving customers in the Philippines and the United States.
-                </p>
-                <p>
-                    <strong>Intellectual Property & Product Expertise:</strong> All scientific processes, product formulations, patents, researched technical expertise, and quality certifications (including the International Aloe Science Council Seal) are the exclusive property and achievement of <strong>Forever Living Products Worldwide</strong>.
-                </p>
-                <p>
-                    <strong>Purpose of Domain:</strong> The domain <em>AloeVeraVitaPlus.com</em> is utilized strictly as a unique marketing landing page to present educational content, distinguish marketing activities from other global FBOs, and facilitate proper accounting and commission tracking through corporate retail systems.
-                </p>
-                <p>
-                    <strong>Health Disclaimer:</strong> These statements have not been evaluated by the Food and Drug Administration (FDA). Products showcased on this site are dietary supplements and personal care items and are not intended to diagnose, treat, cure, or prevent any medical condition.
-                </p>
-            </div>
-            <p style="text-align: center; margin-top: 2rem; opacity: 0.7;">
-                © 2026 AloeVeraVitaPlus. Marketing FBO of Forever Living Products.
-            </p>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <h3>AloeVeraVitaPlus</h3>
+            <p><em>Authorized Independent Forever Business Owner Portal</em></p>
+            <hr class="footer-divider" />
+            <h4>Official Business & Marketing Disclosure</h4>
+            <p>AloeVeraVitaPlus.com is an independent digital marketing channel owned and operated by an authorized Independent Forever Business Owner (FBO) serving customers in the Philippines and the United States.</p>
+            <p><strong>Health Disclaimer:</strong> These statements have not been evaluated by the Food and Drug Administration (FDA). Products showcased on this site are dietary supplements and personal care items and are not intended to diagnose, treat, cure, or prevent any medical condition.</p>
+            <p style="text-align: center; margin-top: 2rem; opacity: 0.7;">© 2026 AloeVeraVitaPlus. Marketing FBO of Forever Living Products.</p>
         </div>
     </footer>
 

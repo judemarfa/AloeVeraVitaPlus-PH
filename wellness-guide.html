@@ -3,49 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Natural Wellness Guide | AloeVeraVitaPlus-PH</title>
+  <title>Natural Wellness Guide | AloeVeraVitaPlus</title>
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
   <style>
     :root {
       --primary-color: #2e7d32;
       --secondary-color: #f4fbf7;
-      --text-color: #333;
+      --accent-gold: #fbc02d;
+      --dark-text: #2c3e50;
       --border-color: #e0e0e0;
+      --white: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      color: var(--text-color);
+      color: var(--dark-text);
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
     }
 
+    /* MAIN HEADER */
+    .main-header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .tagline-badge {
+      font-size: 0.75rem;
+      background-color: #e8f5e9;
+      color: var(--primary-color);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .shop-btn {
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      border-radius: 20px;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+    .shop-btn:hover {
+      background-color: #1b5e20;
+    }
+
+    /* SECTION QUICK NAV BAR */
+    .category-nav {
+      background-color: #e8f5e9;
+      border-top: 1px solid #c8e6c9;
+      border-bottom: 1px solid #c8e6c9;
+      padding: 10px 15px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .category-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .cat-btn {
+      background-color: var(--white);
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+    .cat-btn:hover {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+    /* MAIN CONTENT CONTAINER */
     .container {
       max-width: 900px;
-      margin: 20px auto;
+      margin: 30px auto;
       background: #fff;
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
 
-    header {
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    header.guide-header {
       text-align: center;
       border-bottom: 2px solid var(--primary-color);
       padding-bottom: 20px;
       margin-bottom: 30px;
     }
 
-    h1 {
-      color: var(--primary-color);
-      margin-bottom: 5px;
-    }
-
-    .author {
-      font-weight: bold;
-      color: #666;
-    }
+    h1 { color: var(--primary-color); margin-bottom: 5px; }
+    .author { font-weight: bold; color: #666; }
 
     blockquote {
       font-style: italic;
@@ -60,6 +161,7 @@
       border-bottom: 1px solid var(--border-color);
       padding-bottom: 8px;
       margin-top: 40px;
+      scroll-margin-top: 130px; /* Offset for sticky header */
     }
 
     .note-box {
@@ -106,18 +208,6 @@
       background-color: var(--secondary-color);
     }
 
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 20px;
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .back-btn:hover {
-      text-decoration: underline;
-    }
-
     .inspirational-quote {
       background-color: var(--secondary-color);
       border: 1px solid var(--primary-color);
@@ -127,24 +217,55 @@
       text-align: center;
     }
 
+    /* FOOTER */
+    .main-footer {
+      background-color: #1b2a1c;
+      color: #d1d5db;
+      padding: 3rem 1.5rem;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+    .footer-container { max-width: 1000px; margin: 0 auto; }
+    .footer-divider { border: 0; border-top: 1px solid #374151; margin: 1.5rem 0; }
+
     @media (max-width: 600px) {
-      .container {
-        padding: 15px;
-        margin: 10px;
-      }
-      th, td {
-        padding: 8px;
-        font-size: 0.9em;
-      }
+      .container { padding: 15px; margin: 10px; }
+      th, td { padding: 8px; font-size: 0.9em; }
     }
   </style>
 </head>
 <body>
 
+  <!-- HEADER / NAVIGATION BAR -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="nav-brand">
+        AloeVeraVitaPlus <span class="tagline-badge">Back to HOME FBO Portal</span>
+      </a>
+      <nav class="nav-links">
+        <a href="https://thealoeveraco.shop/XSv3YAC5" class="shop-btn" target="_blank" rel="noopener">🇵🇭 Shop Philippines</a>
+        <a href="https://thealoeveraco.shop/WBoFgYq2" class="shop-btn" target="_blank" rel="noopener">🇺🇸 Shop USA</a>
+      </nav>
+    </div>
+
+    <!-- QUICK SECTION JUMP BUTTONS -->
+    <nav class="category-nav">
+      <div class="category-container">
+        <a href="#gut-health" class="cat-btn">🍃 Gut Health & Detox</a>
+        <a href="#cardiovascular" class="cat-btn">❤️ Cardiovascular</a>
+        <a href="#immune-support" class="cat-btn">🛡️ Immune Support</a>
+        <a href="#joint-muscle" class="cat-btn">🦴 Joint & Muscle</a>
+        <a href="#respiratory" class="cat-btn">🫁 Respiratory & Allergy</a>
+        <a href="#mood-sleep" class="cat-btn">🌙 Mood, Sleep & Energy</a>
+        <a href="#longevity" class="cat-btn">✨ Longevity</a>
+      </div>
+    </nav>
+  </header>
+
   <div class="container">
     <a href="index.html" class="back-btn">&larr; Back to Home</a>
     
-    <header>
+    <header class="guide-header">
       <h1>Natural Wellness Guide</h1>
       <p class="author">Created and curated by judemarfa — Wellness Advocate</p>
       <blockquote>
@@ -153,7 +274,7 @@
     </header>
 
     <!-- SECTION 1 -->
-    <h2 class="section-title">Section 1: Gut Health & Detox</h2>
+    <h2 id="gut-health" class="section-title">Section 1: Gut Health & Detox</h2>
     <div class="note-box">
       <strong>Note:</strong> The following section contains suggested food-based remedies. These are not medications and should not replace professional medical advice or treatment.
     </div>
@@ -180,7 +301,7 @@
     </div>
 
     <!-- SECTION 2 -->
-    <h2 class="section-title">Section 2: Cardiovascular Support</h2>
+    <h2 id="cardiovascular" class="section-title">Section 2: Cardiovascular Support</h2>
     <div class="note-box">
       <strong>Note:</strong> The following section contains suggested food-based remedies. These are not medications and should not replace professional medical advice or treatment.
     </div>
@@ -205,7 +326,7 @@
     </div>
 
     <!-- SECTION 3 -->
-    <h2 class="section-title">Section 3: Immune Support</h2>
+    <h2 id="immune-support" class="section-title">Section 3: Immune Support</h2>
     <div class="note-box">
       <strong>Note:</strong> The following section contains suggested food-based remedies. These are not medications and should not replace professional medical advice or treatment.
     </div>
@@ -232,7 +353,7 @@
     </div>
 
     <!-- SECTION 4 -->
-    <h2 class="section-title">Section 4: Joint, Muscle & Pain Relief</h2>
+    <h2 id="joint-muscle" class="section-title">Section 4: Joint, Muscle & Pain Relief</h2>
     <div class="note-box">
       <strong>Note:</strong> The following section contains suggested food-based remedies. These are not medications and should not replace professional medical advice or treatment.
     </div>
@@ -259,7 +380,7 @@
     </div>
 
     <!-- SECTION 5 -->
-    <h2 class="section-title">Section 5: Respiratory & Allergy Support</h2>
+    <h2 id="respiratory" class="section-title">Section 5: Respiratory & Allergy Support</h2>
     <div class="note-box">
       <strong>Note:</strong> The following section contains suggested food-based remedies. These are not medications and should not replace professional medical advice or treatment.
     </div>
@@ -286,7 +407,7 @@
     </div>
 
     <!-- SECTION 6 -->
-    <h2 class="section-title">Section 6: Mood, Sleep & Energy</h2>
+    <h2 id="mood-sleep" class="section-title">Section 6: Mood, Sleep & Energy</h2>
     <div class="note-box">
       <strong>Note:</strong> The following section contains suggested food-based remedies. These are not medications and should not replace professional medical advice or treatment.
     </div>
@@ -314,7 +435,7 @@
     </div>
 
     <!-- SECTION 7 -->
-    <h2 class="section-title">Section 7: Longevity & Preventive Wellness</h2>
+    <h2 id="longevity" class="section-title">Section 7: Longevity & Preventive Wellness</h2>
     <div class="note-box">
       <strong>Note:</strong> The following section contains suggested food-based remedies. These are not medications and should not replace professional medical advice or treatment.
     </div>
@@ -346,6 +467,19 @@
     </div>
 
   </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <h3>AloeVeraVitaPlus</h3>
+      <p><em>Authorized Independent Forever Business Owner Portal</em></p>
+      <hr class="footer-divider" />
+      <h4>Official Business & Marketing Disclosure</h4>
+      <p>AloeVeraVitaPlus.com is an independent digital marketing channel owned and operated by an authorized Independent Forever Business Owner (FBO) serving customers in the Philippines and the United States.</p>
+      <p><strong>Health Disclaimer:</strong> These statements have not been evaluated by the Food and Drug Administration (FDA). Products showcased on this site are dietary supplements and personal care items and are not intended to diagnose, treat, cure, or prevent any medical condition.</p>
+      <p style="text-align: center; margin-top: 2rem; opacity: 0.7;">© 2026 AloeVeraVitaPlus. Marketing FBO of Forever Living Products.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
